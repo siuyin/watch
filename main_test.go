@@ -3,7 +3,6 @@ package watch
 import (
 	"log"
 	"os"
-	"path"
 	"time"
 )
 
@@ -24,7 +23,7 @@ func ExampleNewWatcher() {
 	for {
 		select {
 		case f := <-wt:
-			procStable(path.Join(monPath, f))
+			procStable(f)
 		}
 	}
 }
